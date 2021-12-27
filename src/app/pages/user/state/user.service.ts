@@ -20,4 +20,12 @@ export class UserService  {
   delete(id: string | number) {
     this.store.remove(id);
   }
+
+  updateFilter(filter: string) {
+    this.store.update({
+      ui: {
+        filter
+      }
+    })
+  }
 }
